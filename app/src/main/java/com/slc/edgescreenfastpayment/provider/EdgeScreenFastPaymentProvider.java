@@ -11,7 +11,6 @@ import com.samsung.android.sdk.look.cocktailbar.SlookCocktailProvider;
 import com.slc.edgescreenfastpayment.R;
 import com.slc.edgescreenfastpayment.code.AlipayDelegate;
 import com.slc.edgescreenfastpayment.receiver.WxActionBroadcastReceiver;
-import com.slc.edgescreenfastpayment.service.WxActionService;
 import com.slc.edgescreenfastpayment.utils.Constants;
 
 /**
@@ -37,8 +36,6 @@ public class EdgeScreenFastPaymentProvider extends SlookCocktailProvider {
 
     private void setPendingIntentByActivity(Context context, RemoteViews remoteViews) {
         setPendingIntentByBroadcast(context, R.id.wx_scan, remoteViews);
-        setPendingIntentByBroadcast(context, R.id.wx_payment_code, remoteViews);
-        setPendingIntentByBroadcast(context, R.id.wx_collect_money_code, remoteViews);
         setPendingIntentByActivity(context, R.id.alipay_scan, AlipayDelegate.getAlipayScan(), remoteViews);
         setPendingIntentByActivity(context, R.id.alipay_payment_code, AlipayDelegate.getAlipayPayment(), remoteViews);
         setPendingIntentByActivity(context, R.id.alipay_collect_money_code, AlipayDelegate.getAlipayCollectMoney(), remoteViews);

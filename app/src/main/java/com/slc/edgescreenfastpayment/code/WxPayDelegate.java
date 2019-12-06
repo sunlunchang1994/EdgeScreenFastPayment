@@ -20,29 +20,21 @@ public class WxPayDelegate {
      * @param intent
      */
     public static void distributeWxAction(Context context, Intent intent) {
-        switch (intent.getIntExtra(Constants.Wx.KEY_PAY_TYPE, 0)) {
-            case R.id.wx_scan:
-                openWxFastPayByCmd(Constants.Wx.CMD_SCAN);
-                break;
-            case R.id.wx_payment_code:
-                openWxFastPayByCmd(Constants.Wx.CMD_ALIPAY_PAYMENT);
-                break;
-            case R.id.wx_collect_money_code:
-                openWxFastPayByCmd(Constants.Wx.CMD_ALIPAY_COLLECT_MONEY);
-                break;
-        }
+        openWxScan(context);
     }
 
     /**
-     * 打开微信相关快捷支付
+     * 打开微信扫一扫
      *
-     * @param cmd
+     * @param context
      */
-    public static void openWxFastPayByCmd(String cmd) {
+    public static void openWxScan(Context context) {
         try {
-            Shell.Pool.SU.run(cmd);
-        } catch (Shell.ShellDiedException e) {
-            //e.printStackTrace();
+            Intent intent = context.getPackageManager().getLaunchIntentForPackage("com.tencent.mm");
+            intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
+            context.startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(context, R.string.label_wechat_is_not_installed, Toast.LENGTH_LONG);
         }
     }
 }
