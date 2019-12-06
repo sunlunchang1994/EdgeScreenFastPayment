@@ -3,7 +3,6 @@ package com.slc.edgescreenfastpayment.provider;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.widget.RemoteViews;
 
 import com.samsung.android.sdk.look.cocktailbar.SlookCocktailManager;
@@ -11,7 +10,6 @@ import com.samsung.android.sdk.look.cocktailbar.SlookCocktailProvider;
 import com.slc.edgescreenfastpayment.R;
 import com.slc.edgescreenfastpayment.code.AlipayDelegate;
 import com.slc.edgescreenfastpayment.receiver.WxActionBroadcastReceiver;
-import com.slc.edgescreenfastpayment.service.WxActionService;
 import com.slc.edgescreenfastpayment.utils.Constants;
 
 /**
