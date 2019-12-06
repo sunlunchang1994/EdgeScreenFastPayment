@@ -25,7 +25,6 @@
         <meta-data
             android:name="com.samsung.android.cocktail.mode"
             android:value="edge_single_plus" />
-        <!--<service android:name=".service.WxActionService" />-->
         <!--<activity android:name=".activity.EdgeConfigure" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
