@@ -2,12 +2,10 @@ package com.slc.edgescreenfastpayment.code;
 
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
 import com.slc.edgescreenfastpayment.R;
 import com.slc.edgescreenfastpayment.utils.Constants;
-
-import eu.chainfire.libsuperuser.Shell;
+import com.topjohnwu.superuser.Shell;
 
 /**
  * @author slc
@@ -39,10 +37,6 @@ public class WxPayDelegate {
      * @param cmd
      */
     public static void openWxFastPayByCmd(String cmd) {
-        try {
-            Shell.Pool.SU.run(cmd);
-        } catch (Shell.ShellDiedException e) {
-            //e.printStackTrace();
-        }
+        Shell.su(cmd).submit();
     }
 }
