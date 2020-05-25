@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EdgeScreenFastPayment.iml" filepath="$PROJECT_DIR$/EdgeScreenFastPayment.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EdgeScreenFastPayment.iml" filepath="$PROJECT_DIR$/EdgeScreenFastPayment.iml" group="EdgeScreenFastPayment" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="EdgeScreenFastPayment/app" />
     </modules>
   </component>
 </project>

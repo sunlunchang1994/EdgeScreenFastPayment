@@ -16,7 +16,7 @@ android {
         targetSdkVersion 28
         versionCode 2
         versionName "1.1"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -33,9 +33,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/sdk-v1.0.0.jar')
     implementation files('libs/slook_v1.4.0.jar')
     //implementation 'eu.chainfire:libsuperuser:1.1.0.+'
